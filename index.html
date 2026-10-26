@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090d"><meta name="description" content="An interactive, beginner-friendly CI/CD pipeline visualizer.">
+  <title>CI/CD Pipeline Visualizer | Dhruv Sonawane</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar"><div class="brand"><div class="brand-mark">&lt;/&gt;</div><div><h1>CI/CD Pipeline Visualizer</h1><p>Understand every stage, one step at a time</p></div></div><div class="creator">Created by <strong>Dhruv Sonawane</strong><button id="themeToggle" class="theme-toggle" aria-label="Toggle page theme">☼ / ☾</button></div></header>
+  <div class="app-layout">
+    <aside class="sidebar"><div class="sidebar-head"><span class="eyebrow">PIPELINE GUIDE</span><h2>From code to users</h2><p>Choose a stage to see how software moves.</p></div><nav id="stepNav" class="step-nav" aria-label="Pipeline steps"></nav>
+      <div class="controls"><button id="playBtn" class="btn btn-primary">▶ Auto-play</button><button id="resetBtn" class="btn">↺ Reset</button></div>
+      <section class="legend"><h3>Moving objects</h3><div><i class="legend-dot code"></i><span>Code change</span></div><div><i class="legend-dot build"></i><span>Build artifact</span></div><div><i class="legend-dot test"></i><span>Test report</span></div><div><i class="legend-dot deploy"></i><span>Deployment package</span></div><div><i class="legend-dot alert"></i><span>Failure / rollback</span></div></section>
+    </aside>
+    <main class="main-content"><section class="stage-heading"><div><span class="eyebrow">LIVE WALKTHROUGH</span><h2 id="stageTitle">A CI/CD journey</h2></div><div class="stage-pill"><span class="pulse"></span><span id="stageCounter">STEP 1 OF 8</span></div></section>
+      <section class="diagram-shell" aria-label="Interactive CI/CD pipeline diagram"><div class="diagram-scroll"><svg id="pipelineSvg" viewBox="0 0 1100 620" role="img" aria-label="CI/CD pipeline from developer code to production"></svg></div><div class="diagram-foot"><span><i class="foot-line"></i> Pipeline flow</span><span><i class="foot-line dashed"></i> Feedback / monitoring</span><span class="diagram-note">Select a stage to explore</span></div></section>
+      <section class="caption-card"><div class="caption-step"><span id="captionNum" class="big-number">01</span><div><h2 id="captionTitle">Plan and code</h2><p id="captionSubtitle">A developer changes the application</p></div></div><div class="caption-part"><h3>In plain words</h3><p id="plainText"></p></div><div class="caption-part"><h3>Technical name</h3><p id="technicalText"></p></div><div class="caption-part"><h3>Watch the picture</h3><p id="watchText"></p></div></section>
+      <footer>Built for learning · No build step · Works on GitHub Pages <span>© Dhruv Sonawane</span></footer>
+    </main>
+  </div>
+</body></html>
